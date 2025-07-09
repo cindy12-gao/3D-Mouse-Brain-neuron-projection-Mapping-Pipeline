@@ -1,4 +1,4 @@
-# 3D Mouse Brain Signal Mapping Pipeline
+# 3D Mouse Brain neuron projection Mapping Pipeline
 
 This repository contains a pipeline for processing and analyzing neuron projection of 3D mouse brain or half brain, including signal extraction, registration, and quantitative analysis.
 
