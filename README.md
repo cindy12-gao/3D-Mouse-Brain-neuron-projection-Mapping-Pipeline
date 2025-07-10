@@ -9,7 +9,7 @@ This repository contains a pipeline for processing and analyzing neuron projecti
 - **QuPath** (v0.5.1)
 - **ImageJ** (v1.54f)
 - **Python** (v3.10.15)
-- **Brainglobe** (v1.3.1)
+- **BrainGlobe** (v1.3.1)
 - **MATLAB** (R2020a)
 - **R** (v4.4.2)
 - **RStudio** (v2024.12.1)
@@ -143,7 +143,7 @@ print "Prediction result saved as 16-bit: " + outputPath
    - Multiply raw images with binary images to extract pure signal (binary_signal channel) using Image Calculator
    - *Note:* Recommends workstation with ≥360GB RAM (depends on dataset size)
 
-9. **Registration (Brainglobe)**
+9. **Registration (BrainGlobe)**
    1. Download atlas
    ```
    brainglobe install -a allen-mouse_10um
@@ -174,7 +174,7 @@ print "Prediction result saved as 16-bit: " + outputPath
 ├── downsampled_standard_channel_0.tiff  # Registered binary_signal channel
 └── downsampled_standard_channel_1.tiff  # Registered raw signal channel (optionally)
 ```
-   5. Locate atlas files in Brainglobe environment or find the files in `./Demo/MATLAB_files`
+   5. Locate atlas files in BrainGlobe environment or find the files in `./Demo/MATLAB_files`
       - Path: `C:/User/.brainglobe/allen_mouse_10um_v1.2`
       - Files: `annotation.tiff` and `structure.csv`
       - Copy to MATLAB working directory
@@ -269,6 +269,6 @@ write.csv(cleaned_data, "summary_tree_aggregated.csv", row.names = FALSE)
 
 
 ## References
-- [Brainglobe Documentation](https://brainglobe.info)
+- [BrainGlobe Documentation](https://brainglobe.info)
 - [QuPath Pixel Classification](https://qupath.readthedocs.io/en/0.5/docs/tutorials/pixel_classification.html#pixel-classification)
 
