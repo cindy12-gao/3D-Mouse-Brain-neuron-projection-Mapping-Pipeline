@@ -1,6 +1,26 @@
-# 3D Mouse Brain neuron projection Mapping Pipeline
+# 3D Mouse Brain Neuron Projection Mapping Pipeline
 
 This repository contains a pipeline for processing and analyzing neuron projection of 3D mouse brain or half brain, including signal extraction, registration, and quantitative analysis.
+
+## Requirements
+
+- **Imaris** (v10.1.0)
+- **Imaris Stitcher** (v10.1.0)
+- **QuPath** (v0.5.1)
+- **ImageJ** (v1.54f)
+- **Python** (v3.10.15)
+- **Brainglobe** (v1.3.1)
+- **MATLAB** (R2020a)
+- **R** (v4.4.2)
+- **RStudio** (v2024.12.1)
+- **High-performance workstation** (≥360GB RAM recommended)
+- Download demo and other files from **Zenodo** ("**Demo.zip**", DOI: 10.5281/zenodo.15510732)
+
+## Notes
+
+- Processing times vary significantly by dataset size
+- The binary image multiplication step is particularly memory-intensive
+- Atlas files must be properly located for registration and analysis
 
 ## Pipeline Overview
 
@@ -247,24 +267,6 @@ cleaned_data <- aggregated_data2 %>% filter(total_volume != 0)
 write.csv(cleaned_data, "summary_tree_aggregated.csv", row.names = FALSE)
 ```
 
-## Requirements
-
-- Imaris (v10.1.0)
-- Imaris Stitcher (v10.1.0)
-- QuPath (v0.5.1)
-- ImageJ (v1.54f)
-- Python (v3.10.15)
-- Brainglobe (v1.3.1)
-- MATLAB (R2020a)
-- R (v4.4.2)
-- RStudio (v2024.12.1)
-- High-performance workstation (≥360GB RAM recommended)
-
-## Notes
-
-- Processing times vary significantly by dataset size
-- The binary image multiplication step is particularly memory-intensive
-- Atlas files must be properly located for registration and analysis
 
 ## References
 - [Brainglobe Documentation](https://brainglobe.info)
