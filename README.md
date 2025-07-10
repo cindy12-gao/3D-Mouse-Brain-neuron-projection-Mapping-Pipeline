@@ -144,11 +144,14 @@ print "Prediction result saved as 16-bit: " + outputPath
    - *Note:* Recommends workstation with ≥360GB RAM (depends on dataset size)
 
 9. **Registration (BrainGlobe)**
-   1. Download atlas
+   1. Install BrainGlobe for Allen mouse brain registration
+      - Create environment and install BrainGlobe following the documentation in [BrainGlobe](https://brainglobe.info/documentation/index.html)
+
+   2. Download atlas
    ```
    brainglobe install -a allen-mouse_10um
    ```
-   2. Register using:
+   3. Register using:
       - Binary-signal channel as channel_0
         - Demo files: `./Demo/Qupath_demo/Binary_signal`
       - Raw signal channel as channel_1 (optionally)
@@ -168,7 +171,7 @@ print "Prediction result saved as 16-bit: " + outputPath
         - In coronal section, if your data start from cerebellum with ventral up, use `pir`
      
 
-   3. Output files:
+   4. Output files:
   ```bash
 /Registration/
 ├── downsampled_standard_channel_0.tiff  # Registered binary_signal channel
@@ -179,7 +182,7 @@ print "Prediction result saved as 16-bit: " + outputPath
       - Files: `annotation.tiff` and `structure.csv`
       - Copy to MATLAB working directory
 
-11. **Distance Map Creation for Radial Signal Profiling (ImageJ)**
+10. **Distance Map Creation for Radial Signal Profiling (ImageJ)**
     1. Open `annotation.tiff` (~4.5GB)
     2. Apply logarithmic intensity scaling
     3. Convert to 16-bit
@@ -188,7 +191,7 @@ print "Prediction result saved as 16-bit: " + outputPath
     6. Create distance map of standard brain
        - `Distance_map.tif`
 
-12. **Quantification Analysis (MATLAB)**
+11. **Quantification Analysis (MATLAB)**
     1. Run script: `./Demo/Script/Sum_of_Brain_Regions_and_distance_map.m`
     2. Input files:
        - Atlas: `annotation.tiff`
